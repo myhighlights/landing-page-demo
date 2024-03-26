@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SelectedGame from "../components/demo/game/SelectedGame";
 import ButtonSection from "../components/demo/game/ButtonSection";
@@ -12,11 +12,17 @@ const StyledGamePageContainer = styled.div`
 `;
 
 const Game = () => {
+  const [checkedCount, setCheckedCount] = useState(0);
+
+  const handleCheckboxChange = (isChecked) => {
+    setCheckedCount(isChecked ? checkedCount + 1 : checkedCount - 1);
+  };
+
   return (
     <StyledGamePageContainer>
       <SelectedGame />
-      <OptionSection />
-      <ButtonSection />
+      <OptionSection onCheckboxChange={handleCheckboxChange} />
+      <ButtonSection isButtonEnabled={checkedCount >= 2} />
     </StyledGamePageContainer>
   );
 };

@@ -11,29 +11,12 @@ body {
   padding: 0;
   width: 80vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: auto;
-}
-
-.generateButton:hover{
-  background-color: #FF2458 !important;
 }
 
 .blackVector{
   display: none;
-}
-
-.generateButton:active{
-  color: black;
-  background-color: #FF7979 !important;
-}
-
-.generateButton:active .whiteVector{
-  display: none;
-}
-
-.generateButton:active .blackVector{
-  display: block;
 }
 
 .hideScrollBar::-webkit-scrollbar {

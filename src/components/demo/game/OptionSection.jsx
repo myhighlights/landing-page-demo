@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SingleOption from "./SingleOption";
 import posterDEMO from "../../../assets/demo/game/facr.png";
 import goalIcon from "../../../assets/demo/game/goalIcon.png";
-import yellowCardIcon from '../../../assets/demo/game/yellowCardIcon.png';
+import yellowCardIcon from "../../../assets/demo/game/yellowCardIcon.png";
 import teamLogo from "../../../assets/demo/game/dynamo.png";
 import playerLogo from "../../../assets/demo/game/ZikaPlayer.png";
 
@@ -25,12 +25,13 @@ const StyledSection = styled.div`
   padding-top: 2rem;
 `;
 
-const OptionSection = () => {
+const OptionSection = ({ onCheckboxChange }) => {
   return (
     <SelectedGameOptionContainer className="hideScrollBar">
       <StyledSection>
         <StyledLabel>Goals</StyledLabel>
         <SingleOption
+          onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
           }
@@ -44,6 +45,7 @@ const OptionSection = () => {
           playerName={"P. Zíka"}
         />
         <SingleOption
+          onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
           }
@@ -57,6 +59,7 @@ const OptionSection = () => {
           playerName={"P. Zíka"}
         />
         <SingleOption
+          onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
           }
@@ -70,6 +73,7 @@ const OptionSection = () => {
           playerName={"P. Zíka"}
         />
         <SingleOption
+          onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
           }
@@ -86,6 +90,7 @@ const OptionSection = () => {
       <StyledSection>
         <StyledLabel>Fouls</StyledLabel>
         <SingleOption
+          onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
           }

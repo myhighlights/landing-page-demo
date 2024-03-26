@@ -16,7 +16,8 @@ const SelectedGameButtonContainer = styled.div`
 
 const StyledButton = styled.a`
   position: relative;
-  background-color: #ff003d;
+  background-color: ${({ isButtonEnabled }) =>
+    isButtonEnabled ? "#ff003d" : "#CCCCCC"};
   width: 20rem !important;
   height: 3.5rem;
   padding: 0.3rem;
@@ -32,6 +33,27 @@ const StyledButton = styled.a`
   text-align: center;
   text-decoration: none;
   clip-path: polygon(0 0, 92% 0, 100% 37%, 100% 100%, 8% 100%, 0 63%);
+  cursor: ${({ isButtonEnabled }) =>
+    isButtonEnabled ? "pointer" : "default"} !important;
+
+  &:hover {
+    background-color: ${({ isButtonEnabled }) =>
+      isButtonEnabled && "#FF2458"} !important;
+  }
+
+  &:active {
+    color: ${({ isButtonEnabled }) => isButtonEnabled && "black"} !important;
+    background-color: ${({ isButtonEnabled }) =>
+      isButtonEnabled && "#FF7979"} !important;
+  }
+
+  &:active .whiteVector {
+    display: ${({ isButtonEnabled }) => isButtonEnabled && "none"} !important;
+  }
+
+  &:active .blackVector {
+    display: ${({ isButtonEnabled }) => isButtonEnabled && "block"} !important;
+  }
 `;
 
 const StyledLeftVector = styled.img`
@@ -46,10 +68,14 @@ const StyledRightVector = styled.img`
   right: 10px;
 `;
 
-const ButtonSection = () => {
+const ButtonSection = ({ isButtonEnabled }) => {
   return (
     <SelectedGameButtonContainer>
-      <StyledButton className="generateButton" href="/demo/games/1234/game/1">
+      <StyledButton
+        isButtonEnabled={isButtonEnabled}
+        className="generateButton"
+        href={isButtonEnabled && "/demo/games/1234/game/1"}
+      >
         <StyledLeftVector className="whiteVector" src={LeftVector} />
         <StyledLeftVector className="blackVector" src={LeftVectorBlack} />
         Generate Highlight

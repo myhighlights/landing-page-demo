@@ -110,11 +110,13 @@ const SingleOption = ({
   teamName,
   playerLogo,
   playerName,
+  onCheckboxChange,
 }) => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleChange = () => {
+  const handleChangeCheckboxIcon = () => {
     setIsChecked(!isChecked);
+    onCheckboxChange(!isChecked);
   };
 
   const returnActionIcon = (action, icon) => {
@@ -168,9 +170,9 @@ const SingleOption = ({
           <CheckboxInput
             type="checkbox"
             checked={isChecked}
-            onChange={handleChange}
+            onChange={handleChangeCheckboxIcon}
           />
-          <CheckboxLabel checked={isChecked} onClick={handleChange}>
+          <CheckboxLabel checked={isChecked} onClick={handleChangeCheckboxIcon}>
             <StyledXIcon checked={isChecked}>
               <img src={XIcon} />
             </StyledXIcon>

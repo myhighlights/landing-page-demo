@@ -40,7 +40,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_0_Petr_Zíka_České_Budějovice.mp4"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
@@ -54,7 +54,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_1_Yusuf_Mladá_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
@@ -63,12 +63,12 @@ const OptionSection = ({ onCheckboxChange }) => {
           teamLogo={fkmbLogo}
           teamName={"MLB"}
           playerLogo={HelalPlayer}
-          playerName={"A. Helal"}
+          playerName={"Yusuf"}
         />
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_2_Yusuf_Mladá_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
@@ -77,12 +77,12 @@ const OptionSection = ({ onCheckboxChange }) => {
           teamLogo={fkmbLogo}
           teamName={"MLB"}
           playerLogo={HelalPlayer}
-          playerName={"A. Helal"}
+          playerName={"Yusuf"}
         />
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_3_Matous_Nikl_Mladá_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
@@ -99,7 +99,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/fouls_0_Jiri_Skalak_České_Budějovice.mp4"
           }
           poster={posterDEMO}
           actionIcon={yellowCardIcon}
@@ -113,7 +113,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/fouls_1_Andrej_Kadlec_Mladá_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={yellowCardIcon}
@@ -138,6 +138,20 @@ const OptionSection = ({ onCheckboxChange }) => {
           actionTime={`25' Minute`}
           teamLogo={fkmbLogo}
           teamName={"MLB"}
+          playerLogo={KusejPlayer}
+          playerName={"V. Kušej"}
+        />
+        <SingleOption
+          onCheckboxChange={onCheckboxChange}
+          thumbnail={
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_13_České_Budějovice.mp4"
+          }
+          poster={posterDEMO}
+          actionIcon={cornerIcon}
+          actionName={"Corner"}
+          actionTime={`70' Minute`}
+          teamLogo={dynamoLogo}
+          teamName={"CEB"}
           playerLogo={KusejPlayer}
           playerName={"V. Kušej"}
         />

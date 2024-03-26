@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'NBArchitekt'; /* Nombre de la fuente que usarás en tus estilos */
-  src: url('../assets/fonts/NB-Architekt-R-Neue-Regular.otf') format('opentype'); /* Ruta al archivo .otf */
+  font-family: 'NBArchitekt';
+  src: url('../assets/fonts/NB-Architekt-R-Neue-Regular.otf') format('opentype');
 }
 
 body {

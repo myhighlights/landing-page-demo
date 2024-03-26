@@ -18,6 +18,13 @@ const SelectedGameContainer = styled.div`
   height: 30%;
 `;
 
+const SelectedGameTitle = styled.h3`
+  font-family: Onest;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 40.8px;
+`;
+
 const SelectedGameOptionContainer = styled.div`
   border: 1px solid yellow;
   height: 60%;
@@ -26,14 +33,19 @@ const SelectedGameOptionContainer = styled.div`
 const SelectedGameButtonContainer = styled.div`
   border: 1px solid blue;
   height: 10%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 1rem 0;
+  padding-bottom: 0;
 `;
 
 const StyledButton = styled.a`
   position: relative;
   background-color: #ff003d;
-  width: 100%;
-  width: 350px !important;
-  height: 4.5rem;
+  width: 20rem !important;
+  height: 3.5rem;
+  padding: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,10 +75,12 @@ const StyledRightVector = styled.img`
 const Game = () => {
   return (
     <StyledGamePageContainer>
-      <SelectedGameContainer></SelectedGameContainer>
+      <SelectedGameContainer>
+        <SelectedGameTitle>Selected Game</SelectedGameTitle>
+      </SelectedGameContainer>
       <SelectedGameOptionContainer></SelectedGameOptionContainer>
       <SelectedGameButtonContainer>
-        <StyledButton className="contactButton" href="/demo/games/1234/game/1">
+        <StyledButton className="generateButton" href="/demo/games/1234/game/1">
           <StyledLeftVector className="whiteVector" src={LeftVector} />
           <StyledLeftVector className="blackVector" src={LeftVectorBlack} />
           Generate Highlight

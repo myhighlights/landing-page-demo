@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import LeftVector from "../assets/demo/game/leftVector.png";
+import LeftVectorBlack from "../assets/demo/game/leftVectorBlack.png";
+import RightVector from "../assets/demo/game/rightVector.png";
+import RightVectorBlack from "../assets/demo/game/rightVectorBlack.png";
 
 const StyledGamePageContainer = styled.div`
   height: 85vh;
@@ -62,10 +66,10 @@ const Game = () => {
       <SelectedGameContainer></SelectedGameContainer>
       <SelectedGameOptionContainer></SelectedGameOptionContainer>
       <SelectedGameButtonContainer>
-        <StyledButton className="contactButton" href={generateMailtoLink()}>
+        <StyledButton className="contactButton" href="/demo/games/1234/game/1">
           <StyledLeftVector className="whiteVector" src={LeftVector} />
           <StyledLeftVector className="blackVector" src={LeftVectorBlack} />
-          Contact Us
+          Generate Highlight
           <StyledRightVector className="whiteVector" src={RightVector} />
           <StyledRightVector className="blackVector" src={RightVectorBlack} />
         </StyledButton>

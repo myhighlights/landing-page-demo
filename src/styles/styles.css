@@ -35,3 +35,7 @@ body {
 .generateButton:active .blackVector{
   display: block;
 }
+
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}

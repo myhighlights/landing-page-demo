@@ -4,8 +4,15 @@ import SingleOption from "./SingleOption";
 import posterDEMO from "../../../assets/demo/game/facr.png";
 import goalIcon from "../../../assets/demo/game/goalIcon.png";
 import yellowCardIcon from "../../../assets/demo/game/yellowCardIcon.png";
-import teamLogo from "../../../assets/demo/game/dynamo.png";
-import playerLogo from "../../../assets/demo/game/ZikaPlayer.png";
+import cornerIcon from "../../../assets/demo/game/cornerIcon.png";
+import dynamoLogo from "../../../assets/demo/game/dynamo.png";
+import fkmbLogo from "../../../assets/demo/game/fkmb.png";
+import ZikaPlayer from "../../../assets/demo/game/ZikaPlayer.png";
+import HelalPlayer from "../../../assets/demo/game/HelalPlayer.png";
+import KadlecPlayer from "../../../assets/demo/game/KadlecPlayer.png";
+import KusejPlayer from "../../../assets/demo/game/KusejPlayer.png";
+import NiklPlayer from "../../../assets/demo/game/NiklPlayer.png";
+import SkalákPlayer from "../../../assets/demo/game/SkalákPlayer.png";
 
 const SelectedGameOptionContainer = styled.div`
   height: 60%;
@@ -39,52 +46,52 @@ const OptionSection = ({ onCheckboxChange }) => {
           actionIcon={goalIcon}
           actionName={"Goal"}
           actionTime={`7' Minute`}
-          teamLogo={teamLogo}
+          teamLogo={dynamoLogo}
           teamName={"CEB"}
-          playerLogo={playerLogo}
+          playerLogo={ZikaPlayer}
           playerName={"P. Zíka"}
         />
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
           actionName={"Goal"}
-          actionTime={`7' Minute`}
-          teamLogo={teamLogo}
-          teamName={"CEB"}
-          playerLogo={playerLogo}
-          playerName={"P. Zíka"}
+          actionTime={`10' Minute`}
+          teamLogo={fkmbLogo}
+          teamName={"MLB"}
+          playerLogo={HelalPlayer}
+          playerName={"A. Helal"}
         />
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
           actionName={"Goal"}
-          actionTime={`7' Minute`}
-          teamLogo={teamLogo}
-          teamName={"CEB"}
-          playerLogo={playerLogo}
-          playerName={"P. Zíka"}
+          actionTime={`15' Minute`}
+          teamLogo={fkmbLogo}
+          teamName={"MLB"}
+          playerLogo={HelalPlayer}
+          playerName={"A. Helal"}
         />
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
           actionName={"Goal"}
-          actionTime={`7' Minute`}
-          teamLogo={teamLogo}
-          teamName={"CEB"}
-          playerLogo={playerLogo}
-          playerName={"P. Zíka"}
+          actionTime={`90+1' Minute`}
+          teamLogo={fkmbLogo}
+          teamName={"MLB"}
+          playerLogo={NiklPlayer}
+          playerName={"M. Nikl"}
         />
       </StyledSection>
       <StyledSection>
@@ -92,16 +99,47 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
           }
           poster={posterDEMO}
           actionIcon={yellowCardIcon}
           actionName={"Yellow Card"}
-          actionTime={`7' Minute`}
-          teamLogo={teamLogo}
+          actionTime={`65' Minute`}
+          teamLogo={dynamoLogo}
           teamName={"CEB"}
-          playerLogo={playerLogo}
-          playerName={"P. Zíka"}
+          playerLogo={SkalákPlayer}
+          playerName={"J. Skalák"}
+        />
+        <SingleOption
+          onCheckboxChange={onCheckboxChange}
+          thumbnail={
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/"
+          }
+          poster={posterDEMO}
+          actionIcon={yellowCardIcon}
+          actionName={"Yellow Card"}
+          actionTime={`76' Minute`}
+          teamLogo={fkmbLogo}
+          teamName={"MLB"}
+          playerLogo={KadlecPlayer}
+          playerName={"A. Kadlec"}
+        />
+      </StyledSection>
+      <StyledSection>
+        <StyledLabel>Corner Kicks</StyledLabel>
+        <SingleOption
+          onCheckboxChange={onCheckboxChange}
+          thumbnail={
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
+          }
+          poster={posterDEMO}
+          actionIcon={cornerIcon}
+          actionName={"Corner"}
+          actionTime={`25' Minute`}
+          teamLogo={fkmbLogo}
+          teamName={"MLB"}
+          playerLogo={KusejPlayer}
+          playerName={"V. Kušej"}
         />
       </StyledSection>
     </SelectedGameOptionContainer>

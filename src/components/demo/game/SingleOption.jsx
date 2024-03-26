@@ -32,7 +32,6 @@ const StyledActionContainer = styled.div`
 
 const StyledIcon = styled.img`
   width: 1rem;
-  height: 1rem;
   margin-right: 1rem;
 `;
 
@@ -53,6 +52,12 @@ const StyledSecondGroup = styled.div`
 const StyledPlayerTeamContainer = styled.div`
   display: flex;
   align-items: center;
+  font-family: Onest;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.4px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.6);
 `;
 
 const StyledTeamPlayerIMG = styled.img`

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import XIcon from "../../../assets/demo/game/XIcon.png";
 
 const StyledSingleOptionContainer = styled.div`
-  border: 1px solid blue;
   height: 10rem;
   margin-top: 1rem;
   display: flex;
@@ -16,6 +16,7 @@ const StyledFirstGroup = styled.div`
 const StyledVideo = styled.div`
   width: 15rem;
   height: 100%;
+  margin-right: 1rem;
 `;
 
 const StyledActionContainer = styled.div`
@@ -43,7 +44,61 @@ const StyledActionName = styled.div`
 
 const StyledActionTime = styled.div``;
 
-const StyledSecondGroup = styled.div``;
+const StyledSecondGroup = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+`;
+
+const StyledPlayerTeamContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const StyledTeamPlayerIMG = styled.img`
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+`;
+
+const StyledTeamPlayerName = styled.div``;
+
+const StyledThirdGroup = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const CheckboxContainer = styled.div`
+  width: 32px;
+  height: 32px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 0.2rem;
+`;
+
+const CheckboxInput = styled.input`
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+`;
+
+const CheckboxLabel = styled.label`
+  width: 100%;
+  height: 100%;
+  border: ${({ checked }) =>
+    checked ? "rgba(255, 0, 61, 1)" : "1.4px solid rgba(255, 255, 255, 0.7)"};
+  background: ${({ checked }) =>
+    checked ? "rgba(255, 0, 61, 1)" : "transparent"};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ checked }) => (checked ? "white" : "inherit")};
+  cursor: pointer;
+`;
+
+const StyledXIcon = styled.span`
+  display: ${({ checked }) => (checked ? "block" : "none")};
+`;
 
 const SingleOption = ({
   thumbnail,
@@ -56,6 +111,12 @@ const SingleOption = ({
   playerLogo,
   playerName,
 }) => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   const returnActionIcon = (action, icon) => {
     switch (action) {
       case "Goal":
@@ -93,8 +154,29 @@ const SingleOption = ({
         </StyledActionContainer>
       </StyledFirstGroup>
       <StyledSecondGroup>
-
+        <StyledPlayerTeamContainer>
+          <StyledTeamPlayerIMG src={teamLogo} />
+          <StyledTeamPlayerName>{teamName}</StyledTeamPlayerName>
+        </StyledPlayerTeamContainer>
+        <StyledPlayerTeamContainer>
+          <StyledTeamPlayerIMG src={playerLogo} />
+          <StyledTeamPlayerName>{playerName}</StyledTeamPlayerName>
+        </StyledPlayerTeamContainer>
       </StyledSecondGroup>
+      <StyledThirdGroup>
+        <CheckboxContainer>
+          <CheckboxInput
+            type="checkbox"
+            checked={isChecked}
+            onChange={handleChange}
+          />
+          <CheckboxLabel checked={isChecked} onClick={handleChange}>
+            <StyledXIcon checked={isChecked}>
+              <img src={XIcon} />
+            </StyledXIcon>
+          </CheckboxLabel>
+        </CheckboxContainer>
+      </StyledThirdGroup>
     </StyledSingleOptionContainer>
   );
 };

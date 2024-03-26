@@ -1,0 +1,129 @@
+.mobile {
+  display: flex;
+}
+
+.desktop {
+  display: none !important;
+}
+
+@media (min-width: 1360px) {
+  .mobile {
+    display: none !important;
+  }
+
+  .desktop {
+    display: flex !important;
+  }
+
+  .carousel-container {
+    flex-direction: row-reverse !important;
+    justify-content: center !important;
+    height: 70vh !important;
+  }
+
+  .carousel-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 15vh !important;
+    width: 1rem !important;
+    left: 13%;
+  }
+
+  .desktop-button {
+    transform: rotate(180deg);
+    width: .2rem !important;
+    height: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .desktop-button.active{
+    height: 2rem !important;
+  }
+
+  .desktop-text {
+    width: 30vw !important;
+    height: 15vh !important;
+    z-index: 2;
+  }
+
+  .desktop-image {
+    width: 70vw;
+  }
+
+  .showCase-desktop{
+    display: flex;
+    justify-content: center;
+  }
+
+  .videoContainer-desktop{
+    width: 50vw !important;
+    left: inherit !important;
+    margin-top: 3rem;
+  }
+
+  .blur-desktop{
+    width: 50vw !important;
+    padding-top: 15rem !important;
+    overflow: hidden !important;
+  }
+
+  .technology-desktop{
+    padding-top: 25rem;
+  }
+
+  .technology-desktop>div>img.technologyText{
+    width: 30vw;
+  }
+
+  .technologyContent{
+    flex-direction: row !important;
+    width: 70vw !important;
+    justify-content: space-between !important;
+    margin-top: 7rem !important;
+    margin-bottom: 10rem;
+  }
+
+  .tech-arrow-mobile{
+    display: none;
+  }
+
+  .tech-left-arrow-desktop{
+    display: block !important;
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-left: 11vw;
+    margin-top: 7rem;
+  }
+
+  .tech-left-arrow-desktop2{
+    display: block !important;
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-left: 41vw;
+    margin-top: 7rem;
+  }
+
+  .tech-right-arrow-desktop{
+    display: block !important;
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-left: 26vw;
+    margin-top: -12rem;
+  }
+
+  .tech-right-arrow-desktop2{
+    display: block !important;
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-left: 56vw;
+    margin-top: -12rem;
+  }
+
+  .contactUs-desktop{
+    margin-top: -2rem !important;
+  }
+}

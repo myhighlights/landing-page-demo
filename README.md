@@ -1,1 +1,2 @@
-# landing-page-demo
+# landing-page
+MyHighlights Landing Page

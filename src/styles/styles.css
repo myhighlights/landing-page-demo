@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'NBArchitekt'; /* Nombre de la fuente que usarás en tus estilos */
-  src: url('../assets/fonts/NB-Architekt-R-Neue-Regular.otf') format('opentype'); /* Ruta al archivo .otf */
+  font-family: 'NBArchitekt';
+  src: url('../assets/fonts/NB-Architekt-R-Neue-Regular.otf') format('opentype');
 }
 
 body {
@@ -8,29 +8,9 @@ body {
   margin: 0;
   color: white;
   padding: 0 1rem;
-}
-
-.pageContainer {
-  padding-top: 6rem;
-}
-
-.contactButton:hover{
-  background-color: #FF2458 !important;
-}
-
-.blackVector{
-  display: none;
-}
-
-.contactButton:active{
-  color: black;
-  background-color: #FF7979 !important;
-}
-
-.contactButton:active .whiteVector{
-  display: none;
-}
-
-.contactButton:active .blackVector{
-  display: block;
+  padding: 0;
+  width: 80vw;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: auto;
 }

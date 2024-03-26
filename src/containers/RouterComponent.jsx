@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes,  Navigate } from 'react-router-dom';
-import Header from '../components/header/Header';
-import Home from '../pages/Home';
 import Demo from '../pages/Demo';
 import Highlight from '../pages/Highlight';
 import Game from '../pages/Game';
@@ -11,15 +9,6 @@ const RouterComponent = () => {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/home"
-          element={
-            <>
-              <Header />
-              <Home />
-            </>
-          }
-        />
         <Route
           path="/demo/games"
           element={
@@ -47,7 +36,7 @@ const RouterComponent = () => {
             </>
           }
         />
-        <Route path="*" element={<Navigate to="/home" />} />
+        <Route path="*" element={<Navigate to="/demo/games" />} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import video from '../../assets/showCase/Myhighlight-video.mp4';
+import posterImg from '../../assets/showCase/video_poster.png';
 
 const StyledVideoContainer = styled.div`
   position: absolute;
@@ -69,6 +70,7 @@ const VideoContainer = () => {
             ref={videoRef}
             src={video}
             controls={isPlaying}
+            poster={posterImg}
           >
             Your browser does not support the video element.
           </StyledVideo>

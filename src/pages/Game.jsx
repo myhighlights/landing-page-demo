@@ -1,47 +1,77 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const StyledGamePageContainer = styled.div`
-    height: 85vh;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
-    border: 1px solid red;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid red;
 `;
 
-const SelectedGameContainer = styled.div `
-    border: 1px solid green;
-    height: 30%;
+const SelectedGameContainer = styled.div`
+  border: 1px solid green;
+  height: 30%;
 `;
 
-const SelectedGameOptionContainer = styled.div `
-    border: 1px solid yellow;
-    height: 60%;
+const SelectedGameOptionContainer = styled.div`
+  border: 1px solid yellow;
+  height: 60%;
 `;
 
-const SelectedGameButtonContainer = styled.div `
-    border: 1px solid blue;
-    height: 10%;
+const SelectedGameButtonContainer = styled.div`
+  border: 1px solid blue;
+  height: 10%;
 `;
 
-const StyledButton = styled.div`
-    border: 1px solid red;
+const StyledButton = styled.a`
+  position: relative;
+  background-color: #ff003d;
+  width: 100%;
+  width: 350px !important;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Onest;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.95px;
+  letter-spacing: 0.002em;
+  text-align: center;
+  text-decoration: none;
+  clip-path: polygon(0 0, 92% 0, 100% 37%, 100% 100%, 8% 100%, 0 63%);
+`;
+
+const StyledLeftVector = styled.img`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+`;
+
+const StyledRightVector = styled.img`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 `;
 
 const Game = () => {
-    return (
-        <StyledGamePageContainer>
-            <SelectedGameContainer>
-            
-            </SelectedGameContainer>
-            <SelectedGameOptionContainer>
-            
-            </SelectedGameOptionContainer>
-            <SelectedGameButtonContainer>
-                
-            </SelectedGameButtonContainer>
-        </StyledGamePageContainer>
-    );
+  return (
+    <StyledGamePageContainer>
+      <SelectedGameContainer></SelectedGameContainer>
+      <SelectedGameOptionContainer></SelectedGameOptionContainer>
+      <SelectedGameButtonContainer>
+        <StyledButton className="contactButton" href={generateMailtoLink()}>
+          <StyledLeftVector className="whiteVector" src={LeftVector} />
+          <StyledLeftVector className="blackVector" src={LeftVectorBlack} />
+          Contact Us
+          <StyledRightVector className="whiteVector" src={RightVector} />
+          <StyledRightVector className="blackVector" src={RightVectorBlack} />
+        </StyledButton>
+      </SelectedGameButtonContainer>
+    </StyledGamePageContainer>
+  );
 };
 
 export default Game;

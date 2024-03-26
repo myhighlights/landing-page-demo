@@ -16,12 +16,22 @@ const StyledHeader = styled.div`
     position: fixed;
 `;
 
+const StyledLogo = styled.img`
+    max-width: 150px;
+    max-height: 40px;
+
+    @media screen and (max-width: 768px) {
+        max-width: 75px;
+        max-height: 20px;
+    }
+`;
+
 const Header = () => {
 
     return (
         <StyledHeader className='header-desktop'>
             <div>
-                <img className='header-logo' src={logo} alt='logo' />
+                <StyledLogo className='header-logo' src={logo} alt='logo' />
             </div>
             <Navbar/>
         </StyledHeader>

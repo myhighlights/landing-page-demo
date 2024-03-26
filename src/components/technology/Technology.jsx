@@ -17,12 +17,21 @@ const StyledTechnologyContent = styled.div`
     margin-top: 3rem;
     align-items: center;
 `;
+const StyledTecnologyTextLogo = styled.img`
+    max-width: 520px;
+    max-height: 184px;
+
+    @media screen and (max-width: 768px) {
+        max-width: 260px;
+        max-height: 92px;
+    }
+`;
 
 const Technology = () => {
     return (
         <TechnologyContainer id='technology' className='technology-desktop'>
             <div>
-                <img className='technologyText' src={TitleText} alt=""/>
+                <StyledTecnologyTextLogo className='technologyText' src={TitleText} alt=""/>
             </div>
             <StyledTechnologyContent className='technologyContent'>
                 <TechnologyContent number={1} color={'#FFE0E0'} borderColor={'white'} text={'Video Input'} />

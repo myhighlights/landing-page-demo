@@ -72,8 +72,8 @@ const ButtonSection = ({ actionType, isButtonEnabled }) => {
   const containsOnlyGoals = actionType.every((item) => item.startsWith("Goal"));
   const videoHREF =
     isButtonEnabled && containsOnlyGoals
-      ? "/demo/games/1234/game/1"
-      : "/demo/games/1234/game/2";
+      ? "/demo/games/4/game/1"
+      : "/demo/games/4/game/2";
 
   return (
     <SelectedGameButtonContainer className="generateButtonContainer">

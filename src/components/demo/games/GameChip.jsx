@@ -84,7 +84,7 @@ const GameChip = ({date, competition, homeIMG, homeName, awayIMG, awayName, home
                 <StyledDateTime>{date}</StyledDateTime>
                 <StyledDateTime>{competition}</StyledDateTime>
             </StyledMatchDateTime>
-            <StyledMatchContainer href='/demo/games/1234'>
+            <StyledMatchContainer href='/demo/games/4'>
                 <StyledDataContainer>
                     <StyledTeamImage src={homeIMG} />
                     <StyledTeamName team='home' homeGoals={homeGoals} awayGoals={awayGoals}>{homeName}</StyledTeamName>

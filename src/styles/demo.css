@@ -8,6 +8,16 @@
   background-color: #363636;
 }
 
+.generateButtonContainer::before {
+  content: "";
+  position: absolute;
+  bottom: 13%;
+  left: -20%;
+  width: 200vw;
+  height: 1px;
+  background-color: #363636;
+}
+
 .rounded-img {
   border-radius: 50%;
   object-fit: cover;

@@ -76,7 +76,7 @@ const ButtonSection = ({ actionType, isButtonEnabled }) => {
       : "/demo/games/1234/game/2";
 
   return (
-    <SelectedGameButtonContainer>
+    <SelectedGameButtonContainer className="generateButtonContainer">
       <StyledButton
         isButtonEnabled={isButtonEnabled}
         className="generateButton"

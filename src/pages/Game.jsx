@@ -13,6 +13,7 @@ const StyledGamePageContainer = styled.div`
 
 const Game = () => {
   const [checkedCount, setCheckedCount] = useState(0);
+  const [actionType, updateActionType] = useState([]);
 
   const handleCheckboxChange = (isChecked) => {
     setCheckedCount(isChecked ? checkedCount + 1 : checkedCount - 1);
@@ -21,8 +22,8 @@ const Game = () => {
   return (
     <StyledGamePageContainer>
       <SelectedGame />
-      <OptionSection onCheckboxChange={handleCheckboxChange} />
-      <ButtonSection isButtonEnabled={checkedCount >= 2} />
+      <OptionSection actionType={actionType} updateActionType={updateActionType} onCheckboxChange={handleCheckboxChange} />
+      <ButtonSection actionType={actionType} isButtonEnabled={checkedCount >= 2} />
     </StyledGamePageContainer>
   );
 };

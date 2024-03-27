@@ -32,12 +32,15 @@ const StyledSection = styled.div`
   padding-top: 2rem;
 `;
 
-const OptionSection = ({ onCheckboxChange }) => {
+const OptionSection = ({ actionType, updateActionType, onCheckboxChange }) => {
   return (
     <SelectedGameOptionContainer className="hideScrollBar">
       <StyledSection>
         <StyledLabel>Goals</StyledLabel>
         <SingleOption
+          id={"1"}
+          actionType={actionType}
+          updateActionType={updateActionType}
           onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_0_Petr_Z%C3%ADka_%C4%8Cesk%C3%A9_Bud%C4%9Bjovice.mp4"
@@ -52,6 +55,9 @@ const OptionSection = ({ onCheckboxChange }) => {
           playerName={"P. Zíka"}
         />
         <SingleOption
+          id={"2"}
+          actionType={actionType}
+          updateActionType={updateActionType}
           onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_1_Yusuf_Mlada%CC%81_Boleslav.mp4"
@@ -66,6 +72,9 @@ const OptionSection = ({ onCheckboxChange }) => {
           playerName={"A. Helal"}
         />
         <SingleOption
+          id={"3"}
+          actionType={actionType}
+          updateActionType={updateActionType}
           onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_2_Yusuf_Mlad%C3%A1_Boleslav.mp4"
@@ -80,6 +89,9 @@ const OptionSection = ({ onCheckboxChange }) => {
           playerName={"A. Helal"}
         />
         <SingleOption
+          id={"4"}
+          actionType={actionType}
+          updateActionType={updateActionType}
           onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_3_Matous_Nikl_Mlad%C3%A1_Boleslav.mp4"
@@ -97,6 +109,9 @@ const OptionSection = ({ onCheckboxChange }) => {
       <StyledSection>
         <StyledLabel>Fouls</StyledLabel>
         <SingleOption
+          id={"5"}
+          actionType={actionType}
+          updateActionType={updateActionType}
           onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/fouls_0_Jiri_Skalak_%C4%8Cesk%C3%A9_Bud%C4%9Bjovice.mp4"
@@ -111,6 +126,9 @@ const OptionSection = ({ onCheckboxChange }) => {
           playerName={"J. Skalák"}
         />
         <SingleOption
+          id={"6"}
+          actionType={actionType}
+          updateActionType={updateActionType}
           onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/fouls_1_Andrej_Kadlec_Mlad%C3%A1_Boleslav.mp4"
@@ -128,6 +146,9 @@ const OptionSection = ({ onCheckboxChange }) => {
       <StyledSection>
         <StyledLabel>Corner Kicks</StyledLabel>
         <SingleOption
+          id={"7"}
+          actionType={actionType}
+          updateActionType={updateActionType}
           onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_13_%C4%8Cesk%C3%A9_Bud%C4%9Bjovice.mp4"
@@ -142,6 +163,9 @@ const OptionSection = ({ onCheckboxChange }) => {
           playerName={"V. Kušej"}
         />
         <SingleOption
+          id={"8"}
+          actionType={actionType}
+          updateActionType={updateActionType}
           onCheckboxChange={onCheckboxChange}
           thumbnail={
             "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"

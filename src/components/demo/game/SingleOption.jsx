@@ -106,6 +106,7 @@ const StyledXIcon = styled.span`
 `;
 
 const SingleOption = ({
+  id,
   thumbnail,
   poster,
   actionIcon,
@@ -116,12 +117,27 @@ const SingleOption = ({
   playerLogo,
   playerName,
   onCheckboxChange,
+  actionType,
+  updateActionType,
 }) => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleChangeCheckboxIcon = () => {
+  const handleChangeCheckboxIcon = (type, id) => {
     setIsChecked(!isChecked);
     onCheckboxChange(!isChecked);
+
+    // Check if the action is already present in the array
+    const actionIndex = actionType.indexOf(type + id);
+
+    if (actionIndex !== -1) {
+      // If the action is already present, remove it from the array
+      const updatedActionType = [...actionType];
+      updatedActionType.splice(actionIndex, 1);
+      updateActionType(updatedActionType);
+    } else {
+      // If the action is not present, add it to the array
+      updateActionType([...actionType, type + id]);
+    }
   };
 
   const returnActionIcon = (action, icon) => {
@@ -175,9 +191,12 @@ const SingleOption = ({
           <CheckboxInput
             type="checkbox"
             checked={isChecked}
-            onChange={handleChangeCheckboxIcon}
+            onChange={() => handleChangeCheckboxIcon(actionName, id)}
           />
-          <CheckboxLabel checked={isChecked} onClick={handleChangeCheckboxIcon}>
+          <CheckboxLabel
+            checked={isChecked}
+            onClick={() => handleChangeCheckboxIcon(actionName, id)}
+          >
             <StyledXIcon checked={isChecked}>
               <img src={XIcon} />
             </StyledXIcon>

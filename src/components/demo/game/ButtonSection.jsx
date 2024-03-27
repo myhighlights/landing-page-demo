@@ -68,13 +68,19 @@ const StyledRightVector = styled.img`
   right: 10px;
 `;
 
-const ButtonSection = ({ isButtonEnabled }) => {
+const ButtonSection = ({ actionType, isButtonEnabled }) => {
+  const containsOnlyGoals = actionType.every((item) => item.startsWith("Goal"));
+  const videoHREF =
+    isButtonEnabled && containsOnlyGoals
+      ? "/demo/games/1234/game/1"
+      : "/demo/games/1234/game/2";
+
   return (
     <SelectedGameButtonContainer>
       <StyledButton
         isButtonEnabled={isButtonEnabled}
         className="generateButton"
-        href={isButtonEnabled && "/demo/games/1234/game/1"}
+        href={videoHREF}
       >
         <StyledLeftVector className="whiteVector" src={LeftVector} />
         <StyledLeftVector className="blackVector" src={LeftVectorBlack} />

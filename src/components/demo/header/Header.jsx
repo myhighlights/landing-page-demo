@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom'; 
 import '../../../styles/demo.css'
 import logo from '../../../assets/logo.png';
-import profileImage from '../../../assets/demo/header/profileImage.jpeg';
+import profileImage from '../../../assets/demo/games/sparta.png';
 import Separator from '../commons/Separator';
 
 const StyledHeader = styled.div`

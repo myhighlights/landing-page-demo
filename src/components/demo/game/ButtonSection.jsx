@@ -6,7 +6,7 @@ import RightVector from "../../../assets/demo/game/rightVector.png";
 import RightVectorBlack from "../../../assets/demo/game/rightVectorBlack.png";
 
 const SelectedGameButtonContainer = styled.div`
-  height: 10%;
+  height: 12%;
   display: flex;
   justify-content: end;
   align-items: end;

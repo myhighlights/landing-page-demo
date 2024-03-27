@@ -7,7 +7,7 @@ import BreadCrumb from "../commons/BreadCrumb";
 const SelectedGameContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 30%;
+  height: 35%;
 `;
 
 const SelectedGameTitle = styled.h3`

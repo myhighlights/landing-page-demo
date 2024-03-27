@@ -19,7 +19,7 @@ import sigIMG from "../../../assets/demo/games/sig.png";
 import spaIMG from "../../../assets/demo/games/spa.png";
 
 const StyledGamesContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 1rem;
 `;
 
 const StyledSubtitle = styled.h1`
@@ -32,6 +32,7 @@ const StyledSubtitle = styled.h1`
 
 const StyledChipsContainer = styled.div`
   height: 32rem;
+  margin-top: -1rem;
 `;
 
 const StyledOverflowGames = styled.div`

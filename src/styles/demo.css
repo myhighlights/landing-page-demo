@@ -54,7 +54,7 @@
 .gradientBottom::after {
   content: "";
   position: absolute;
-  bottom: 13%;
+  bottom: 12%;
   width: 80%;
   height: 4rem;
   background: linear-gradient(

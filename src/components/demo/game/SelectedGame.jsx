@@ -8,6 +8,7 @@ const SelectedGameContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 35%;
+  padding-top: 4rem;
 `;
 
 const SelectedGameTitle = styled.h3`
@@ -25,6 +26,8 @@ const SelectedGameDataContainer = styled.div`
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.6);
+  margin-top: -2rem;
+  padding-bottom: 1rem;
 
   > div {
     display: flex;

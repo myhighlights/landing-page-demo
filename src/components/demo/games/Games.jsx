@@ -57,7 +57,7 @@ const StyledSeparator = styled.span`
   border-right: ${({ position, arraySize }) =>
     position !== arraySize - 1 ? "2px solid #2C2C2C" : ""};
   height: 21rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
 `;
 
 const Games = () => {

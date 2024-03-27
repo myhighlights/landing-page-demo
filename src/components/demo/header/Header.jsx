@@ -12,13 +12,15 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
   font-family: Onest;
   font-size: 15px;
   font-weight: 500;
   line-height: 21.67px;
   letter-spacing: 1px;
   text-align: left;
+  background-color: black;
+  z-index: 5;
 `;
 
 const StyledLeftPart = styled.div`

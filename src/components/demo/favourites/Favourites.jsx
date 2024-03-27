@@ -12,7 +12,7 @@ import Separator from "../commons/Separator";
 import FilterButton from "./FilterButton";
 
 const StyledFavouritesContainer = styled.div`
-  margin-top: 2rem;
+  padding-top: 6rem;
 `;
 
 const StyledSubtitle = styled.p`

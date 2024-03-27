@@ -11,7 +11,7 @@
 .generateButtonContainer::before {
   content: "";
   position: absolute;
-  bottom: 13%;
+  bottom: 12%;
   left: -20%;
   width: 200vw;
   height: 1px;
@@ -43,7 +43,7 @@
   bottom: 0;
   right: 10%;
   width: 8rem;
-  height: 40rem;
+  height: 30rem;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0) 0%,

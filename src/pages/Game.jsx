@@ -5,7 +5,7 @@ import ButtonSection from "../components/demo/game/ButtonSection";
 import OptionSection from "../components/demo/game/OptionSection";
 
 const StyledGamePageContainer = styled.div`
-  height: 88vh;
+  height: 99vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

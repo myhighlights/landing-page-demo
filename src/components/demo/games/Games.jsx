@@ -82,7 +82,7 @@ const Games = () => {
         awayGoals: "0",
       },
       {
-        date: "Sat - March, 9",
+        date: "Sat - March, 09",
         competition: "Fortuna:Liga",
         homeIMG: libIMG,
         homeName: "LIB",
@@ -94,7 +94,7 @@ const Games = () => {
     ],
     [
       {
-        date: "Sat - March, 3",
+        date: "Sat - March, 03",
         competition: "Fortuna:Liga",
         homeIMG: mlbIMG,
         homeName: "MLB",

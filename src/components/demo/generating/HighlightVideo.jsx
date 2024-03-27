@@ -82,6 +82,10 @@ const StyledMediaContainer = styled.div`
   height: 85%;
 `;
 
+const StyledCrossLink = styled.a`
+  text-decoration: none;
+`;
+
 const StyledCrossIcon = styled.img`
   width: 35px;
   height: 35px;
@@ -166,10 +170,12 @@ const HighlightVideo = () => {
         <StyledVideoContainer>
           <StyledMatchInfoContainer>
             <StyledMatchText>Your Video</StyledMatchText>
-            <StyledMatchInfo>MLB - CEB, March 3</StyledMatchInfo>
+            <StyledMatchInfo>MLB - CEB, March 03</StyledMatchInfo>
           </StyledMatchInfoContainer>
           <StyledMediaContainer>
-            <StyledCrossIcon src={CrossIcon} />
+            <StyledCrossLink href="/demo/games/4">
+              <StyledCrossIcon src={CrossIcon} />
+            </StyledCrossLink>
             <StyledVideo>
               <video width="100%" height="100%" controls poster={videoPoster}>
                 <source src={videoSrc} type="video/mp4" />

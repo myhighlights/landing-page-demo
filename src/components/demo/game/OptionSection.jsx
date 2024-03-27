@@ -30,11 +30,12 @@ const StyledLabel = styled.span`
 
 const StyledSection = styled.div`
   padding-top: 2rem;
+  padding-bottom: 3rem;
 `;
 
 const OptionSection = ({ actionType, updateActionType, onCheckboxChange }) => {
   return (
-    <SelectedGameOptionContainer className="hideScrollBar">
+    <SelectedGameOptionContainer className="hideScrollBar gradientBottom">
       <StyledSection>
         <StyledLabel>Goals</StyledLabel>
         <SingleOption

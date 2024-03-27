@@ -166,7 +166,7 @@ const Games = () => {
     return (
         <StyledGamesContainer>
             <StyledSubtitle>Games</StyledSubtitle>
-            <StyledChipsContainer className='gradient'>
+            <StyledChipsContainer className='gradientGames'>
                 <StyledOverflowGames className='hideScrollbar'>
                     {matches.map((row, index) => (
                         <>

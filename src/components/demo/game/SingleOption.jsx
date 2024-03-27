@@ -163,7 +163,7 @@ const SingleOption = ({
     <StyledSingleOptionContainer>
       <StyledFirstGroup>
         <StyledVideo>
-          <video width="100%" height="100%" poster={poster} controls>
+          <video width="100%" height="100%" poster={poster} controls muted>
             <source src={thumbnail} type="video/mp4" />
             Your browser does not support the video element.
           </video>

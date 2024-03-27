@@ -177,7 +177,7 @@ const HighlightVideo = () => {
               <StyledCrossIcon src={CrossIcon} />
             </StyledCrossLink>
             <StyledVideo>
-              <video width="100%" height="100%" controls poster={videoPoster}>
+              <video width="100%" height="100%" controls poster={videoPoster} muted>
                 <source src={videoSrc} type="video/mp4" />
                 Your browser does not support the video element.
               </video>

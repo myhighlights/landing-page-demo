@@ -23,7 +23,7 @@ const StyledActionContainer = styled.div`
   display: flex;
   align-items: center;
   font-family: Onest;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20.4px;
   text-align: left;
@@ -53,7 +53,7 @@ const StyledPlayerTeamContainer = styled.div`
   display: flex;
   align-items: center;
   font-family: Onest;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20.4px;
   text-align: left;
@@ -74,8 +74,8 @@ const StyledThirdGroup = styled.div`
 `;
 
 const CheckboxContainer = styled.div`
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   position: relative;
   cursor: pointer;
   margin-right: 0.2rem;

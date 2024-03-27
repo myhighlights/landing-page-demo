@@ -134,10 +134,10 @@ const useVideoSelector = () => {
     const { videoParam } = useParams();
 
     if (videoParam === '1') {
-        return '';
+        return 'https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/MLB_CEB_goals_only.mp4';
     }
 
-    return '';
+    return 'https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/MLB_CEB_goals_fouls.mp4';
 };
 
 const HighlightVideo = () => {

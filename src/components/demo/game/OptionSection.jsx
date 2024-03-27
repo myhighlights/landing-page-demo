@@ -40,7 +40,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_0_Petr_Zíka_České_Budějovice.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_0_Petr_Z%C3%ADka_%C4%8Cesk%C3%A9_Bud%C4%9Bjovice.mp4"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
@@ -54,7 +54,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_1_Yusuf_Mladá_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_1_Yusuf_Mlada%CC%81_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
@@ -63,12 +63,12 @@ const OptionSection = ({ onCheckboxChange }) => {
           teamLogo={fkmbLogo}
           teamName={"MLB"}
           playerLogo={HelalPlayer}
-          playerName={"Yusuf"}
+          playerName={"A. Helal"}
         />
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_2_Yusuf_Mladá_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_2_Yusuf_Mlad%C3%A1_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
@@ -77,12 +77,12 @@ const OptionSection = ({ onCheckboxChange }) => {
           teamLogo={fkmbLogo}
           teamName={"MLB"}
           playerLogo={HelalPlayer}
-          playerName={"Yusuf"}
+          playerName={"A. Helal"}
         />
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_3_Matous_Nikl_Mladá_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/goals_3_Matous_Nikl_Mlad%C3%A1_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={goalIcon}
@@ -99,7 +99,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/fouls_0_Jiri_Skalak_České_Budějovice.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/fouls_0_Jiri_Skalak_%C4%8Cesk%C3%A9_Bud%C4%9Bjovice.mp4"
           }
           poster={posterDEMO}
           actionIcon={yellowCardIcon}
@@ -113,7 +113,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/fouls_1_Andrej_Kadlec_Mladá_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/fouls_1_Andrej_Kadlec_Mlad%C3%A1_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={yellowCardIcon}
@@ -130,7 +130,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_13_%C4%8Cesk%C3%A9_Bud%C4%9Bjovice.mp4"
           }
           poster={posterDEMO}
           actionIcon={cornerIcon}
@@ -144,7 +144,7 @@ const OptionSection = ({ onCheckboxChange }) => {
         <SingleOption
           onCheckboxChange={onCheckboxChange}
           thumbnail={
-            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_13_České_Budějovice.mp4"
+            "https://my-highlights-test.s3.eu-central-1.amazonaws.com/cut_clips/corners_14_Mlad%C3%A1_Boleslav.mp4"
           }
           poster={posterDEMO}
           actionIcon={cornerIcon}

@@ -72,12 +72,12 @@ const Navbar = () => {
                 <div className="bar"></div>
             </NavbarToggle>
             <MainNav isopen={isOpen ? isOpen.toString() : undefined}>
-                <li><a href="home" className="nav-links">Home</a></li>
-                <li><a href="#carouselSection" className="nav-links">About Us</a></li>
-                <li><a href="#showCase" className="nav-links">Showcase</a></li>
-                <li><a href="#technology" className="nav-links">Techonology</a></li>
-                <li><a href="#contactUs" className="nav-links">Investment</a></li>
-                <li><a href="#contactUs" className="nav-links">Contact Us</a></li>
+                <li><a href="home" className="nav-links" onClick={() => setIsOpen(false)}>Home</a></li>
+                <li><a href="#carouselSection" className="nav-links" onClick={() => setIsOpen(false)}>About Us</a></li>
+                <li><a href="#showCase" className="nav-links" onClick={() => setIsOpen(false)}>Showcase</a></li>
+                <li><a href="#technology" className="nav-links" onClick={() => setIsOpen(false)}>Techonology</a></li>
+                <li><a href="#contactUs" className="nav-links" onClick={() => setIsOpen(false)}>Investment</a></li>
+                <li><a href="#contactUs" className="nav-links" onClick={() => setIsOpen(false)}>Contact Us</a></li>
             </MainNav>
         </Nav>
         <nav className="navbar-desktop">

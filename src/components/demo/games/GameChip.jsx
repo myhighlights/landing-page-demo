@@ -4,7 +4,8 @@ import '../../../styles/demo.css'
 
 const StyledChipContainer = styled.div`
     width: 25rem;
-    margin: 1rem;
+    margin: .5rem 1rem;
+    margin-left: ${({ columnNumber }) => (columnNumber=== 0 && "0")};
 `;
 
 const StyledMatchDateTime = styled.div`
@@ -76,10 +77,10 @@ const StyledResult = styled.span`
     text-align: center;
 `; 
 
-const GameChip = ({date, competition, homeIMG, homeName, awayIMG, awayName, homeGoals, awayGoals}) => {
+const GameChip = ({date, competition, homeIMG, homeName, awayIMG, awayName, homeGoals, awayGoals, columnNumber}) => {
 
     return (
-        <StyledChipContainer>
+        <StyledChipContainer columnNumber={columnNumber}>
             <StyledMatchDateTime>
                 <StyledDateTime>{date}</StyledDateTime>
                 <StyledDateTime>{competition}</StyledDateTime>

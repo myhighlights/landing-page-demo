@@ -46,6 +46,7 @@ const StyledOverflowGames = styled.div`
 
 const StyledColumn = styled.div`
   padding: 0 3rem;
+  padding-left: ${({ columnNumber }) => columnNumber === 0 && "0"};
   display: flex;
   height: 32rem;
   flex-direction: column;
@@ -178,9 +179,10 @@ const Games = () => {
         <StyledOverflowGames className="hideScrollbar">
           {matches.map((row, index) => (
             <>
-              <StyledColumn>
+              <StyledColumn columnNumber={index}>
                 {row.map((game) => (
                   <GameChipComponent
+                    columnNumber={index}
                     date={game.date}
                     competition={game.competition}
                     homeIMG={game.homeIMG}

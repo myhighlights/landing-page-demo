@@ -9,6 +9,15 @@ import ExportIconWhite from "../../../assets/demo/highlightVideo/ExportIconWhite
 import ShareIconWhite from "../../../assets/demo/highlightVideo/ShareIconWhite.svg";
 import SelectionDropdown from "./SelectionDropdown";
 import videoPoster from "../../../assets/demo/game/facr.png";
+import BreadCrumb from "../commons/BreadCrumb";
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: start;
+`;
 
 const StyledHighlightContainer = styled.div`
   width: 100vw;
@@ -36,6 +45,8 @@ const StyledVideoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  left: 0;
+  margin-top: -5rem;
 `;
 
 const StyledMatchInfoContainer = styled.div`
@@ -146,54 +157,57 @@ const HighlightVideo = () => {
   const videoSrc = useVideoSelector();
 
   return (
-    <StyledHighlightContainer>
-      <StyledBlurContainer>
-        <StyledBlur src={BlurImage} />
-      </StyledBlurContainer>
-      <StyledVideoContainer>
-        <StyledMatchInfoContainer>
-          <StyledMatchText>Your Video</StyledMatchText>
-          <StyledMatchInfo>MLB - CEB, March 3</StyledMatchInfo>
-        </StyledMatchInfoContainer>
-        <StyledMediaContainer>
-          <StyledCrossIcon src={CrossIcon} />
-          <StyledVideo>
-            <video width="100%" height="100%" controls poster={videoPoster}>
-              <source src={videoSrc} type="video/mp4" />
-              Your browser does not support the video element.
-            </video>
-          </StyledVideo>
-          <StyledFormatContainer>
-            <SelectionDropdown />
-            <StyledOptionsContainer>
-              <StyledOptionsText>Options</StyledOptionsText>
-              <StyledOptionsButton
-                className="hover-red"
-                onMouseEnter={() => updateExportIconSrc(ExportIconWhite)}
-                onMouseLeave={() => updateExportIconSrc(ExportIcon)}
-              >
-                <StyledOptionsButtonIcon
-                  className="options-icon"
-                  src={exportIconSrc}
-                />
-                <StyledOptionsButtonText>Export</StyledOptionsButtonText>
-              </StyledOptionsButton>
-              <StyledOptionsButton
-                className="hover-red"
-                onMouseEnter={() => updateShareIconSrc(ShareIconWhite)}
-                onMouseLeave={() => updateShareIconSrc(ShareIcon)}
-              >
-                <StyledOptionsButtonIcon
-                  className="options-icon"
-                  src={shareIconSrc}
-                />
-                <StyledOptionsButtonText>Share</StyledOptionsButtonText>
-              </StyledOptionsButton>
-            </StyledOptionsContainer>
-          </StyledFormatContainer>
-        </StyledMediaContainer>
-      </StyledVideoContainer>
-    </StyledHighlightContainer>
+    <StyledContainer>
+      <BreadCrumb pageNumber={3} />
+      <StyledHighlightContainer>
+        <StyledBlurContainer>
+          <StyledBlur src={BlurImage} />
+        </StyledBlurContainer>
+        <StyledVideoContainer>
+          <StyledMatchInfoContainer>
+            <StyledMatchText>Your Video</StyledMatchText>
+            <StyledMatchInfo>MLB - CEB, March 3</StyledMatchInfo>
+          </StyledMatchInfoContainer>
+          <StyledMediaContainer>
+            <StyledCrossIcon src={CrossIcon} />
+            <StyledVideo>
+              <video width="100%" height="100%" controls poster={videoPoster}>
+                <source src={videoSrc} type="video/mp4" />
+                Your browser does not support the video element.
+              </video>
+            </StyledVideo>
+            <StyledFormatContainer>
+              <SelectionDropdown />
+              <StyledOptionsContainer>
+                <StyledOptionsText>Options</StyledOptionsText>
+                <StyledOptionsButton
+                  className="hover-red"
+                  onMouseEnter={() => updateExportIconSrc(ExportIconWhite)}
+                  onMouseLeave={() => updateExportIconSrc(ExportIcon)}
+                >
+                  <StyledOptionsButtonIcon
+                    className="options-icon"
+                    src={exportIconSrc}
+                  />
+                  <StyledOptionsButtonText>Export</StyledOptionsButtonText>
+                </StyledOptionsButton>
+                <StyledOptionsButton
+                  className="hover-red"
+                  onMouseEnter={() => updateShareIconSrc(ShareIconWhite)}
+                  onMouseLeave={() => updateShareIconSrc(ShareIcon)}
+                >
+                  <StyledOptionsButtonIcon
+                    className="options-icon"
+                    src={shareIconSrc}
+                  />
+                  <StyledOptionsButtonText>Share</StyledOptionsButtonText>
+                </StyledOptionsButton>
+              </StyledOptionsContainer>
+            </StyledFormatContainer>
+          </StyledMediaContainer>
+        </StyledVideoContainer>
+      </StyledHighlightContainer>
+    </StyledContainer>
   );
 };
 

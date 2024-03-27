@@ -13,7 +13,7 @@ import galIMG from '../../../assets/demo/games/gal.png';
 import libIMG from '../../../assets/demo/games/lib.png';
 
 const StyledGamesContainer = styled.div`
-    margin-top: 4rem;
+    margin-top: 2rem;
 `;
 
 const StyledSubtitle = styled.h1`

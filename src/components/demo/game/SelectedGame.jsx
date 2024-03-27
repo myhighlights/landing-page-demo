@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import fkmbLogo from "../../../assets/demo/game/fkmb.png";
 import dynamoLogo from "../../../assets/demo/game/dynamo.png";
+import BreadCrumb from "../commons/BreadCrumb";
 
 const SelectedGameContainer = styled.div`
   display: flex;
@@ -14,7 +15,8 @@ const SelectedGameTitle = styled.h3`
   font-size: 25px;
   font-weight: 500;
   line-height: 40.8px;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  margin-top: 2rem;
 `;
 
 const SelectedGameDataContainer = styled.div`
@@ -75,6 +77,7 @@ const StyledTeamLogo = styled.img`
 const SelectedGame = () => {
   return (
     <SelectedGameContainer>
+      <BreadCrumb pageNumber={2} />
       <SelectedGameTitle>Selected Game</SelectedGameTitle>
       <SelectedGameDataContainer>
         <StyledHomeContainer>

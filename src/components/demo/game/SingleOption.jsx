@@ -23,7 +23,7 @@ const StyledActionContainer = styled.div`
   display: flex;
   align-items: center;
   font-family: Onest;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 20.4px;
   text-align: left;
@@ -53,7 +53,7 @@ const StyledPlayerTeamContainer = styled.div`
   display: flex;
   align-items: center;
   font-family: Onest;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 20.4px;
   text-align: left;

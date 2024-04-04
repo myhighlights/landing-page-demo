@@ -133,17 +133,6 @@ const GameChip = ({
   columnNumber,
   matchHidden,
 }) => {
-  const [timeLeft, setTimeLeft] = useState({});
-  const [showMatch, setShowMatch] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  });
-
   const calculateTimeLeft = () => {
     const deadline = new Date("April 29, 2024 00:00:00").getTime();
     const now = new Date().getTime();
@@ -169,23 +158,24 @@ const GameChip = ({
     return { days, hours, minutes, seconds };
   };
 
-  const showTimeLeft = () => {
-    if (Object.keys(timeLeft).length) {
-      return `${timeLeft.days}:${timeLeft.hours}:${timeLeft.minutes}:${timeLeft.seconds}`;
-    }
-  };
-
-  const isCountdownFinished = () => {
-    return Object.values(timeLeft).every((value) => value === "00");
-  };
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [showMatch, setShowMatch] = useState(true);
 
   useEffect(() => {
-    if (isCountdownFinished()) {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [timeLeft]);
+
+  useEffect(() => {
+    if (Object.values(timeLeft).every((value) => value === "00")) {
       setShowMatch(false);
-    } else {
-      setShowMatch(true);
     }
   }, [timeLeft]);
+
+  const showTimeLeft = `${timeLeft.days}:${timeLeft.hours}:${timeLeft.minutes}:${timeLeft.seconds}`;
 
   return (
     <StyledChipContainer columnNumber={columnNumber}>
@@ -198,7 +188,7 @@ const GameChip = ({
       >
         <StyledCountDownContainer isHidden={matchHidden && showMatch}>
           <StyledCountDownText>This game will be available</StyledCountDownText>
-          <StyledContDown>{showTimeLeft()}</StyledContDown>
+          <StyledContDown>{showTimeLeft}</StyledContDown>
         </StyledCountDownContainer>
         <StyledDataContainer>
           <StyledTeamImage src={homeIMG} />

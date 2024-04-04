@@ -11,6 +11,23 @@ body {
   padding: 0;
   width: 80vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden !important;
   margin: auto;
+}
+
+.scrollBody {
+  overflow: scroll !important;
+  overflow-x: hidden !important;
+}
+
+.scrollBody::-webkit-scrollbar {
+  display: none;
+}
+
+.blackVector {
+  display: none;
+}
+
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
 }

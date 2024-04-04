@@ -134,6 +134,7 @@ const GameChip = ({
   matchHidden,
 }) => {
   const [timeLeft, setTimeLeft] = useState({});
+  const [showMatch, setShowMatch] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -144,7 +145,7 @@ const GameChip = ({
   });
 
   const calculateTimeLeft = () => {
-    const deadline = new Date("April 7, 2024 23:59:59").getTime();
+    const deadline = new Date("April 29, 2024 00:00:00").getTime();
     const now = new Date().getTime();
     const difference = deadline - now;
 
@@ -174,14 +175,28 @@ const GameChip = ({
     }
   };
 
+  const isCountdownFinished = () => {
+    return Object.values(timeLeft).every((value) => value === "00");
+  };
+
+  useEffect(() => {
+    if (isCountdownFinished()) {
+      setShowMatch(false);
+    } else {
+      setShowMatch(true);
+    }
+  }, [timeLeft]);
+
   return (
     <StyledChipContainer columnNumber={columnNumber}>
       <StyledMatchDateTime>
         <StyledDateTime>{date}</StyledDateTime>
         <StyledDateTime>{competition}</StyledDateTime>
       </StyledMatchDateTime>
-      <StyledMatchContainer href="/demo/games/4">
-        <StyledCountDownContainer isHidden={matchHidden}>
+      <StyledMatchContainer
+        href={!(matchHidden && showMatch) && "/demo/games/4"}
+      >
+        <StyledCountDownContainer isHidden={matchHidden && showMatch}>
           <StyledCountDownText>This game will be available</StyledCountDownText>
           <StyledContDown>{showTimeLeft()}</StyledContDown>
         </StyledCountDownContainer>

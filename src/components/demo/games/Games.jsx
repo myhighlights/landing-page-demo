@@ -72,6 +72,7 @@ const Games = () => {
         awayName: "ACS",
         homeGoals: "6",
         awayGoals: "1",
+        matchHidden: true,
       },
       {
         date: "Sun - March, 10",
@@ -82,6 +83,7 @@ const Games = () => {
         awayName: "ACS",
         homeGoals: "4",
         awayGoals: "0",
+        matchHidden: false,
       },
       {
         date: "Sat - March, 09",
@@ -92,6 +94,7 @@ const Games = () => {
         awayName: "KAR",
         homeGoals: "1",
         awayGoals: "0",
+        matchHidden: false,
       },
     ],
     [
@@ -104,6 +107,7 @@ const Games = () => {
         awayName: "CEB",
         homeGoals: "3",
         awayGoals: "1",
+        matchHidden: false,
       },
       {
         date: "Sun - March, 03",
@@ -114,6 +118,7 @@ const Games = () => {
         awayName: "SLA",
         homeGoals: "0",
         awayGoals: "0",
+        matchHidden: false,
       },
       {
         date: "Sun - March, 03",
@@ -124,6 +129,7 @@ const Games = () => {
         awayName: "SPA",
         homeGoals: "1",
         awayGoals: "2",
+        matchHidden: false,
       },
     ],
     [
@@ -136,6 +142,7 @@ const Games = () => {
         awayName: "BOH",
         homeGoals: "3",
         awayGoals: "1",
+        matchHidden: false,
       },
       {
         date: "Fri - March, 01",
@@ -146,6 +153,7 @@ const Games = () => {
         awayName: "SPA",
         homeGoals: "4",
         awayGoals: "0",
+        matchHidden: false,
       },
       {
         date: "Sun - February, 25",
@@ -156,6 +164,7 @@ const Games = () => {
         awayName: "ACS",
         homeGoals: "1",
         awayGoals: "3",
+        matchHidden: false,
       },
     ],
     [
@@ -168,6 +177,7 @@ const Games = () => {
         awayName: "PCE",
         homeGoals: "3",
         awayGoals: "0",
+        matchHidden: false,
       },
     ],
   ];
@@ -183,6 +193,7 @@ const Games = () => {
                 {row.map((game) => (
                   <GameChipComponent
                     columnNumber={index}
+                    matchHidden={game.matchHidden}
                     date={game.date}
                     competition={game.competition}
                     homeIMG={game.homeIMG}
